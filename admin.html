@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="#">Admin Panel</a>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+      <div class="container mt-4">
+        <h1>Product Management</h1>
+        <div class="row mt-4" id="product-list">
+          <!-- Product cards will be dynamically added here -->
+        </div>
+        <button class="btn btn-primary mt-3" id="add-product">Add Product</button>
+      </div>
+    </main>
+
+    <!-- Modal for adding/editing product -->
+    <div class="modal" id="product-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Add Product</h5>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <form id="product-form">
+              <div class="form-group">
+                <label for="product-name">Name:</label>
+                <input type="text" class="form-control" id="product-name" />
+              </div>
+              <div class="form-group">
+                <label for="product-price">Price:</label>
+                <input type="text" class="form-control" id="product-price" />
+              </div>
+              <div class="form-group">
+                <label for="product-description">Description:</label>
+                <textarea class="form-control" id="product-description"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Save</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">&copy; 2024 E-Commerce. All Rights Reserved.</footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="admin.js"></script>
+  </body>
+</html>
